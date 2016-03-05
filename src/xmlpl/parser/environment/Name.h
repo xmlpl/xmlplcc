@@ -10,10 +10,10 @@ class Name {
   std::string prefix;
   std::string realName;
   std::string realPrefix;
-  const char *namespaceStr;
+  std::string namespaceStr;
 
 public:
-  Name() : namespaceStr(0) {}
+  Name() {}
   Name(const Name &n) : name(n.name), prefix(n.prefix),
 			realName(n.realName), realPrefix(n.realPrefix),
 			namespaceStr(n.namespaceStr) {}
@@ -32,8 +32,8 @@ public:
   void setRealPrefix(const std::string &realPrefix) {this->realPrefix = realPrefix;}
   const std::string &getRealPrefix() const {return realPrefix;}
 
-  void setNamespace(const char *namespaceStr) {this->namespaceStr = namespaceStr;}
-  const char *getNamespace() const {return namespaceStr;}
+  void setNamespace(const std::string namespaceStr) {this->namespaceStr = namespaceStr;}
+  const std::string &getNamespace() const {return namespaceStr;}
 
   bool hasPseudonym() const {return name != "" || prefix != "";}
 

@@ -79,8 +79,8 @@ EnvEntryRef Environment::lookupAll(const Name &name, const Location &location) {
 
 EnvEntryRef Environment::declare(EnvEntryRef entry) {
 
-  if (entry->getName().getNamespace() == 0)
-    entry->getName().setNamespace(defaultNS.c_str());
+  if (entry->getName().getNamespace().empty())
+    entry->getName().setNamespace(defaultNS);
 
   return env[entry->getName().getName()][entry->getName().getPrefix()] = entry;
 }

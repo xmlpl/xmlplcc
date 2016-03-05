@@ -35,7 +35,7 @@ xmlplcc_LDADD =\
 	@antlr_LIBS@
 
 xmlplcc_LDFLAGS =\
-	-export-dynamic
+	-export-dynamic -lltdl
 
 xmlplcc_CXXFLAGS =\
   @BasicUtils_CFLAGS@\

@@ -871,7 +871,7 @@ void CppCodeGenerator::visitAST(ImportDecl *importDecl) {
   const vector<EnvEntryRef> &entries = importDecl->getEntries();
   if (entries.empty()) return;
 
-  ASSERT_OR_THROW("Import must have namespace!", importDecl->getName().getNamespace());
+  ASSERT_OR_THROW("Import must have namespace!", !importDecl->getName().getNamespace().empty());
 
   // Namespace
   namespaceOff();

@@ -4,11 +4,11 @@
 
 using namespace std;
 
-Name::Name(const string &name) : namespaceStr(0) {
+Name::Name(const string &name) {
   parseName(name, *this);
 }
 
-Name::Name(const char *name) : namespaceStr(0) {
+Name::Name(const char *name) {
   parseName(string(name), *this);
 }
 

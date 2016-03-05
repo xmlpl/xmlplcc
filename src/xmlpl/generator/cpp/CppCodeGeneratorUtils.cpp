@@ -112,7 +112,7 @@ string CppCodeGenerator::getTypeName(unsigned int type) {
 string CppCodeGenerator::getCPPName(const Name &name, const string prefix) {
   string nameStr = prefix + getCPPNameStr(name.getRealName());
 
-  if (!name.getNamespace() || !*name.getNamespace()) return nameStr;
+  if (name.getNamespace().empty()) return nameStr;
 
   if (namespaceStr == name.getNamespace()) return nameStr;
 
