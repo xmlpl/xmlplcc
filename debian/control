@@ -1,0 +1,15 @@
+Source: xmlplcc
+Section: unknown
+Priority: optional
+Maintainer: Joseph Coffland <joseph@xmlpl.org>
+Build-Depends: debhelper (>= 4.0.0), autotools-dev, libbasicutils, libxmlpl-cpp-runtime, libantlr, cdbs, debhelper (>= 4.0)
+Standards-Version: 3.6.2
+
+Package: xmlplcc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libbasicutils, libxmlpl-cpp-runtime
+Description: xmlpl compiler with c++ target support
+ *** Unofficial package from joseph@xmlpl.org ***
+ .
+ XmlPL compiler which outputs C++ code for the GNU C++ compiler.
+ See xmlpl.org

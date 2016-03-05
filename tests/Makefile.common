@@ -1,0 +1,7 @@
+INCLUDES=$(shell libxmlpl_cpp_runtime-config --cflags)
+XMLPLCC=@top_srcdir@/src/xmlpl/xmlplcc
+AM_LDFLAGS = $(shell libxmlpl_cpp_runtime-config --libs)
+AM_CXXFLAGS=-g
+
+%.cpp: %.xpl
+	$(XMLPLCC) $<
